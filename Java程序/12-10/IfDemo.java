@@ -80,7 +80,7 @@ public class IfDemo{
 	}*/
 	
 	//上个案例比我自己更好的写法
-	int time = (int)(40*Math.random());
+	/*int time = (int)(40*Math.random());
 	System.out.println(time);
 	if(time<20){
 		System.out.println("恭喜进入决赛");
@@ -92,7 +92,60 @@ public class IfDemo{
 		}
 	}else{
 		System.out.println("对不起，你被淘汰了");
+	}*/
+	
+	//switch多分支选择结构
+	/*
+	char c = 'a';
+	int random = (int)(26*Math.random());
+	char ch = (char)(random+c);
+	System.out.println(ch);
+	switch(ch){
+		case 'a':
+		System.out.println("元音"+ch);
+		break;
+		case 'e':
+		System.out.println("元音"+ch);
+		break;
+		case 'i':
+		System.out.println("元音"+ch);
+		break;
+		case 'o':
+		System.out.println("元音"+ch);
+		break;
+		case 'u':
+		System.out.println("元音"+ch);
+		break;
+		case 'y':
+		System.out.println("半元音"+ch);
+		break;
+		case 'w':
+		System.out.println("半元音"+ch);
+		break;
+		default:
+	    System.out.println("辅音"+ch);
 	}
+	*/
+	
+	//swith多分支选择结构简化版
+	char c = 'a';
+	int random = (int)(Math.random()*26);
+	char ch = (char)(c+random);
+	switch(ch){
+		case 'a':
+		case 'e':
+		case 'i':
+		case 'o':
+		case 'u':
+		System.out.println("元音"+ch);break;
+		case 'y':
+		case 'w':
+		System.out.println("半元音"+ch);break;
+		default:
+		System.out.println("辅音"+ch);break;
+		
+	}
+	
 	
 	
 	
