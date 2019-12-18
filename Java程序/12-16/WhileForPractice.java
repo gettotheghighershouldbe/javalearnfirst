@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class WhilePractice{
+public class WhileForPractice{
 	public static void main(String[] args){
 		//100以内的偶数和相加
 		/*int i = 1;
@@ -206,21 +206,88 @@ public class WhilePractice{
 		
 		
 		//用while和for循环输出1-1000之间能被5整除的数，且每行输出3个。
-		//先用while循环试试
-		int i = 1;
+		//先用while循环试试(这个看了答案才写出来)
+		/*int i = 1;
 		int count = 0;
-		while(i<1000){
+		while(i<=1000){
 			if(i%5==0){
-				System.out.println(i);
+				System.out.print(i+"\t");
 				count++;
-				if(count>=3){
-				System.out.println(\t);
 			}
-			
+			if(count>=3){
+				System.out.println();
+				count = 0;
 			}
-			
 			i++;
-		}		
+		}*/
+		
+
+		//再用for循环来实现
+		/*int count = 0;
+		for(int i=1;i<=1000;i++){
+			if(i%5==0){
+			System.out.print(i+"\t");
+			count++;
+			}
+			if(count>=3){
+			System.out.println();
+			count = 0;
+			}
+		}*/
+		
+		
+		//使用循环分别实现将10进值整数变成二进制数(这个的逆序也是看视频才知道)
+		//先用while循环实现
+		Scanner sc = new Scanner(System.in);
+		/*int i = sc.nextInt();
+		String str = "";
+		while(i!=0){
+			int number = i%2;
+			str = number + str;
+			System.out.println(number);
+			System.out.println(str);
+			System.out.println(i);
+			i = i/2;
+		}
+		System.out.println(str);*/
+		
+		
+		//再用for循环来实现
+		
+		/*int number = sc.nextInt();
+		String str = "";
+		
+		for(;number!=0;number = number/2){
+			int i = number%2;
+			str = i + str;
+		}
+		System.out.println(str);
+		*/
+		
+		
+		//编程求：1！+2！+3！+.....+10！
+		//先用while循环来实现(找找看有没有更好的方法)
+		/*int i = 1;
+		int count = 1;
+		int sum = 0;
+		
+		while(i<=4){
+			count = count * i;
+			sum = sum + count;
+			i++;
+		}
+		System.out.println(sum);
+		*/
+		
+		//再用for循环来实现
+		/*int count=1;
+		int sum = 0;
+		for(int i=1;i<=5;i++){
+			count = count*i;
+			sum = sum + count;
+		}
+		System.out.println(sum);*/
+
 		
 		
 	}
