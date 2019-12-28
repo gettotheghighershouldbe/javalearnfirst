@@ -58,7 +58,7 @@ public class MultipleLoop{
 	//多重循环中使用continue 3个班级各4名学员参赛，计算每个班级参赛学员平均分，统计成绩大于85分学员数
 	
 	
-	Scanner sc = new Scanner(System.in);
+	/*Scanner sc = new Scanner(System.in);
 	int count = 0;
 	int sum = 0;
 	for(int i =1;i<=3;i++){
@@ -79,12 +79,19 @@ public class MultipleLoop{
 	
 		
 	}
-		System.out.println("高于85分的人数为"+count);
+		System.out.println("高于85分的人数为"+count);*/
 	
 
-		
-		
-	
-		
+	//百钱买百鸡（注意逻辑方式，注意细节）
+	for(int x = 1;x<100/5;x++){
+		for(int y = 1;y<100/3;y++){
+				int z=100-x-y;
+				if((x*5+y*3+z/3)==100&&(z%3)==0)
+				{
+				System.out.println("这次买的方式是"+"大鸡"+x+"中鸡"+y+"小鸡"+z);
+				}
+			}
+		}
 	}
-}
+}	
+	
