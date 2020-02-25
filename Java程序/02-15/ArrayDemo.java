@@ -21,7 +21,7 @@ public class ArrayDemo{
 		//创建内存空间	
 		array = new int[5];
 		//数组赋值
-		array[0] = 0;
+		array[0] = 0; 
 		array[1] = 1;
 		array[2] = 2;
 		array[3] = 3;
@@ -32,10 +32,15 @@ public class ArrayDemo{
 
 		//数组在几种创建方式
 		//1、声明并申请空间 
-		int[] arr = new int[5];
+		int[] arr = new int[4];
 		//2、声明数组并赋值
-		int[] array2 = new int[]{1,2,3};
-		System.out.println(array2[2]);
+		int[] arr2 = new int[]{1,2,3};
+		System.out.println(arr2[2]);
+		//3、直接初始化操作
+		int[] arr3 = {1,2,3,4,5};
+
+		System.out.println(arr.length);
+
 
 
 		/*int[]score = new int[]{60,70,90,100,120};
@@ -57,6 +62,6 @@ public class ArrayDemo{
 		}*/
 	}
 
-
+ 
 
 }
