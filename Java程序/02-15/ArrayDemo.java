@@ -17,7 +17,7 @@
 public class ArrayDemo{
 	public static void main(String[] args) {
 		//声明数组
-		int[] array;
+		/*int[] array;
 		//创建内存空间	
 		array = new int[5];
 		//数组赋值
@@ -43,24 +43,30 @@ public class ArrayDemo{
 
 
 
-		/*int[]score = new int[]{60,70,90,100,120};
+		int[]score = new int[]{60,70,90,100,120};
 		double avg;
 		int sum = 0;
 		for(int i = 0;i < score.length;i++){
 			sum = sum + score[i];
 		}
 		avg = sum/score.length;
-		System.out.println("平均分是"+avg);
+		System.out.println("平均分是"+avg);*/
 
 
-		int[] scores = new int[5];
-		int sum = 0;
-		Scanner input = new Scanner(System.in);
-		System.out.println("请输入5位学员的成绩：");
-		for(int i = o;i<scores.length;i++){
-			scores[i]
-		}*/
+		/*
+		数组是引用类型，当创建完成数组之后，相当于是在方法外定义了一个变量，此时数组中的值是有默认值的。
+		默认值是什么，取决于你定义的数组的类型：
+			int：0
+			String :null
+			boolean:false
+		数组可以根据下表获取值，但是获取的时候下标的范围是[0,length-1]
+		*/
+		int[] array = new int[5];
+		System.out.println(array[0]);
+	
 	}
+
+	
 
  
 
