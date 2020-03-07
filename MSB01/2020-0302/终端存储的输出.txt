@@ -1,0 +1,1090 @@
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+jasondeMacBook-Pro:~ jason$ java -version
+java version "12.0.2" 2019-07-16
+Java(TM) SE Runtime Environment (build 12.0.2+10)
+Java HotSpot(TM) 64-Bit Server VM (build 12.0.2+10, mixed mode, sharing)
+jasondeMacBook-Pro:~ jason$ javac
+用法: javac <options> <source files>
+其中, 可能的选项包括:
+  @<filename>                  从文件读取选项和文件名
+  -Akey[=value]                传递给注释处理程序的选项
+  --add-modules <模块>(,<模块>)*
+        除了初始模块之外要解析的根模块; 如果 <module>
+                为 ALL-MODULE-PATH, 则为模块路径中的所有模块。
+  --boot-class-path <path>, -bootclasspath <path>
+        覆盖引导类文件的位置
+  --class-path <path>, -classpath <path>, -cp <path>
+        指定查找用户类文件和注释处理程序的位置
+  -d <directory>               指定放置生成的类文件的位置
+  -deprecation                 输出使用已过时的 API 的源位置
+  --enable-preview             启用预览语言功能。要与 -source 或 --release 一起使用。
+  -encoding <encoding>         指定源文件使用的字符编码
+  -endorseddirs <dirs>         覆盖签名的标准路径的位置
+  -extdirs <dirs>              覆盖所安装扩展的位置
+  -g                           生成所有调试信息
+  -g:{lines,vars,source}       只生成某些调试信息
+  -g:none                      不生成任何调试信息
+  -h <directory>               指定放置生成的本机标头文件的位置
+  --help, -help, -?            输出此帮助消息
+  --help-extra, -X             输出额外选项的帮助
+  -implicit:{none,class}       指定是否为隐式引用文件生成类文件
+  -J<flag>                     直接将 <标记> 传递给运行时系统
+  --limit-modules <模块>(,<模块>)*
+        限制可观察模块的领域
+  --module <模块>(,<模块>)*, -m <模块>(,<模块>)*
+        只编译指定的模块，请检查时间戳
+  --module-path <path>, -p <path>
+        指定查找应用程序模块的位置
+  --module-source-path <module-source-path>
+        指定查找多个模块的输入源文件的位置
+  --module-version <版本>        指定正在编译的模块版本
+  -nowarn                      不生成任何警告
+  -parameters                  生成元数据以用于方法参数的反射
+  -proc:{none,only}            控制是否执行注释处理和/或编译。
+  -processor <class1>[,<class2>,<class3>...]
+        要运行的注释处理程序的名称; 绕过默认的搜索进程
+  --processor-module-path <path>
+        指定查找注释处理程序的模块路径
+  --processor-path <path>, -processorpath <path>
+        指定查找注释处理程序的位置
+  -profile <profile>           请确保使用的 API 在指定的配置文件中可用
+  --release <release>          针对特定发行版进行编译。支持的发行版：7, 8, 9, 10, 11, 12
+  -s <directory>               指定放置生成的源文件的位置
+  --source <release>, -source <release>
+        提供与指定发行版的源兼容性。支持的发行版：7, 8, 9, 10, 11, 12
+  --source-path <path>, -sourcepath <path>
+        指定查找输入源文件的位置
+  --system <jdk>|none          覆盖系统模块位置
+  --target <release>, -target <release>
+        生成针对特定 VM 版本的类文件。支持的版本：7, 8, 9, 10, 11, 12
+  --upgrade-module-path <path>
+        覆盖可升级模块位置
+  -verbose                     输出有关编译器正在执行的操作的消息
+  --version, -version          版本信息
+  -Werror                      出现警告时终止编译
+
+jasondeMacBook-Pro:~ jason$ cd Documents/GitHub/javalearnfirst/MSB01/2020-0302/
+jasondeMacBook-Pro:2020-0302 jason$ ls
+HelloWorld.java
+jasondeMacBook-Pro:2020-0302 jason$ javac HelloWorld.java
+jasondeMacBook-Pro:2020-0302 jason$ java HelloWorld
+错误: 找不到或无法加载主类 HelloWorld
+原因: java.lang.ClassNotFoundException: HelloWorld
+jasondeMacBook-Pro:2020-0302 jason$ javac HelloWorld.java 
+jasondeMacBook-Pro:2020-0302 jason$ jacac HelloWorld.java 
+-bash: jacac: command not found
+jasondeMacBook-Pro:2020-0302 jason$ javac HelloWorld.java
+jasondeMacBook-Pro:2020-0302 jason$ java HelloWorld
+错误: 找不到或无法加载主类 HelloWorld
+原因: java.lang.ClassNotFoundException: HelloWorld
+jasondeMacBook-Pro:2020-0302 jason$ javac HelloWorld.java 
+jasondeMacBook-Pro:2020-0302 jason$ java HelloWorld
+HelloWorld
+jasondeMacBook-Pro:2020-0302 jason$  javac HelloWorld.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestVar.java 
+TestVar.java:21: 错误: 整数太大
+		long longNumber = 888888888888;
+		                  ^
+1 个错误
+错误: 编译失败
+jasondeMacBook-Pro:2020-0302 jason$  javac HelloWorld.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestVar
+错误: 找不到或无法加载主类 TestVar
+原因: java.lang.ClassNotFoundException: TestVar
+jasondeMacBook-Pro:2020-0302 jason$  javac TestVar.java 
+TestVar.java:16: 错误: 整数太大
+		long longNumber = 8888888888888;
+		                  ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$  javac TestVar.java 
+TestVar.java:16: 错误: 整数太大
+		long longNumber = 8888888888888;
+		                  ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$  javac TestVar.java 
+TestVar.java:7: 错误: 程序包Syst不存在
+		Syst.out.println(i);
+		    ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$  javac TestVar.java 
+jasondeMacBook-Pro:2020-0302 jason$ java T
+T.class        TestVar.class  TestVar.java   
+jasondeMacBook-Pro:2020-0302 jason$ java TestVar
+0
+0
+jasondeMacBook-Pro:2020-0302 jason$  javac TestVar.java 
+TestVar.java:10: 错误: 无法从静态上下文中引用非静态 变量 j
+		System.out.println(j);
+		                   ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$  javac TestVar.java 
+jasondeMacBook-Pro:2020-0302 jason$ java TestVar
+0
+0
+jasondeMacBook-Pro:2020-0302 jason$ java TestVar2.java
+TestVar2.java:9: 错误: 非法字符: '\u2018'
+		c1 = ‘\u3234’ c2 = 'sha'
+		     ^
+TestVar2.java:9: 错误: 非法字符: '\u3234'
+		c1 = ‘\u3234’ c2 = 'sha'
+		           ^
+TestVar2.java:9: 错误: 非法字符: '\u2019'
+		c1 = ‘\u3234’ c2 = 'sha'
+		            ^
+TestVar2.java:9: 错误: 未结束的字符文字
+		c1 = ‘\u3234’ c2 = 'sha'
+		                   ^
+TestVar2.java:9: 错误: 字符文字的行结尾不合法
+		c1 = ‘\u3234’ c2 = 'sha'
+		                       ^
+TestVar2.java:9: 错误: 不是语句
+		c1 = ‘\u3234’ c2 = 'sha'
+		                     ^
+6 个错误
+错误: 编译失败
+jasondeMacBook-Pro:2020-0302 jason$  javac TestVar2.java 
+TestVar2.java:9: 错误: 非法字符: '\u2018'
+		c1 = ‘\u534e’ c2 = '你'
+		     ^
+TestVar2.java:9: 错误: 非法字符: '\u2019'
+		c1 = ‘\u534e’ c2 = '你'
+		            ^
+TestVar2.java:9: 错误: 不是语句
+		c1 = ‘\u534e’ c2 = '你'
+		           ^
+TestVar2.java:9: 错误: 需要';'
+		c1 = ‘\u534e’ c2 = '你'
+		                      ^
+4 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestVar2.java
+TestVar2.java:9: 错误: 需要';'
+		c1 = '\u534e' c2 = '你'
+		             ^
+TestVar2.java:9: 错误: 需要';'
+		c1 = '\u534e' c2 = '你'
+		                      ^
+2 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestVar2.java
+TestVar2.java:13: 错误: 找不到符号
+		System.out.println("c1="+c+",c2="+c2);
+		                         ^
+  符号:   变量 c
+  位置: 类 TestVar2
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestVar2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestVar2
+x=12,y=9
+b=true
+c1=华,c2=你
+d=3.1415
+jasondeMacBook-Pro:2020-0302 jason$ javac TestVar2.java
+TestVar2.java:9: 错误: 未结束的字符文字
+		c1 = '\u534e'; c2 = '你好';
+		                    ^
+TestVar2.java:9: 错误: 未结束的字符文字
+		c1 = '\u534e'; c2 = '你好';
+		                       ^
+TestVar2.java:9: 错误: 不是语句
+		c1 = '\u534e'; c2 = '你好';
+		                      ^
+3 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestVar2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestVar2
+x=12,y=9
+b=true
+c1=华,c2=好
+jasondeMacBook-Pro:2020-0302 jason$     0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~0~jasondeMacBook-Pro:2020-0302 jason$ javac Convert.java
+错误: 找不到文件: Convert.java
+用法: javac <选项> <源文件>
+使用 --help 可列出可能的选项
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert
+694.8
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert
+694.8
+694.8
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert
+694.8
+694.8
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+TestConvert.java:14: 错误: 对于println(byte,byte), 找不到合适的方法
+		System.out.println(b1,b2);
+		          ^
+    方法 PrintStream.println()不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(boolean)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(char)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(int)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(long)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(float)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(double)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(char[])不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(String)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 PrintStream.println(Object)不适用
+      (实际参数列表和形式参数列表长度不同)
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert
+694.8
+694.8
+156
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+TestConvert.java:14: 错误: 需要')'
+		System.out.println("b1="+b1+",b2="b2);
+		                                  ^
+TestConvert.java:14: 错误: 需要';'
+		System.out.println("b1="+b1+",b2="b2);
+		                                    ^
+2 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert
+694.8
+694.8
+b1=67,b2=89
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+TestConvert.java:16: 错误: 不兼容的类型: 从int转换到byte可能会有损失
+		byte b3 = b1 + b2;
+		             ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+TestConvert.java:16: 错误: 需要 '.class'
+		byte b3 = byte(b1 + b2);
+		              ^
+TestConvert.java:16: 错误: 不是语句
+		byte b3 = byte(b1 + b2);
+		                  ^
+TestConvert.java:16: 错误: 需要';'
+		byte b3 = byte(b1 + b2);
+		                      ^
+3 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert
+694.8
+694.8
+b1=67,b2=89
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.j
+错误: 仅当显式请求注释处理时才接受类名称 'TestConvert.j'
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert
+694.8
+694.8
+b1=67,b2=89
+b3=-100
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+^[[AjasondeMacBook-Pro:2020-0302 jason$ java TestConvert
+694.8
+694.8
+b1=67,b2=89
+b3=-100
+Infinity
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert
+694.8
+694.8
+b1=67,b2=89
+b3=-100
+Infinity
+1.23
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+TestConvert.java:23: 错误: 不兼容的类型: 从double转换到float可能会有损失
+		float f3 = 1.23;//必须加f
+		           ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert
+694.8
+694.8
+b1=67,b2=89
+b3=-100
+Infinity
+1.23
+123
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+TestConvert.java:29: 错误: 整数太大
+		long l2 = 30000000000;
+		          ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+^[[AjasondeMacBook-Pro:2020-0302 jason$ java TestConvert
+694.8
+694.8
+b1=67,b2=89
+b3=-100
+Infinity
+1.23
+123
+30000000000
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert
+694.8
+694.8
+b1=67,b2=89
+b3=-100
+Infinity
+1.23
+123
+30000000000
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert
+694.8
+694.8
+b1=67,b2=89
+b3=-100
+Infinity
+1.23
+123
+30000000000
+3.0000001E10
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+TestConvert.java:29: 错误: 整数太大
+		long l2 = 30000000000000000000000000L;//必须加L
+		          ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+TestConvert.java:29: 错误: 整数太大
+		long l2 = 30000000000000000000L;//必须加L
+		          ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert
+694.8
+694.8
+b1=67,b2=89
+b3=-100
+Infinity
+1.23
+123
+3000000000000000
+3.00000003E15
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert
+694.8
+694.8
+b1=67,b2=89
+b3=-100
+Infinity
+1.23
+123
+3000000000000000
+3.00000003E15
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert
+694.8
+694.8
+b1=67,b2=89
+b3=-100
+Infinity
+1.23
+123
+3000000000000000
+3.00000003E15
+3000000028082176
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2
+错误: 仅当显式请求注释处理时才接受类名称 'TestConvert2'
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+TestConvert2.java:2: 错误: 需要'('
+	public static void main{
+	                       ^
+TestConvert2.java:6: 错误: 需要')'
+		System.out.println("f1="f1);
+		                        ^
+TestConvert2.java:6: 错误: 需要';'
+		System.out.println("f1="f1);
+		                          ^
+TestConvert2.java:7: 错误: 需要')'
+		System.out.println("f2="f2);
+		                        ^
+TestConvert2.java:7: 错误: 需要';'
+		System.out.println("f2="f2);
+		                          ^
+5 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+TestConvert2.java:2: 错误: 需要'('
+	public static void main{
+	                       ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+TestConvert2.java:4: 错误: 不兼容的类型: 从double转换到float可能会有损失
+		float f1 = 0.1;
+		           ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=888888888
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+TestConvert2.java:10: 错误: 整数太大
+		long l2 = 8888888888;
+		          ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=8888888888
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=8888888888
+d1=2.0E20
+d2=124.0
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+TestConvert2.java:18: 错误: 不兼容的类型: 从int转换到byte可能会有损失
+		byte b1 =1 , b2 =2 , b3 = 129;
+		                          ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+jasondeMacBook-Pro:2020-0302 jason$ java T
+T.class             TestConvert.java    TestConvert2.java   TestVar.java        TestVar2.java
+TestConvert.class   TestConvert2.class  TestVar.class       TestVar2.class      
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=8888888888
+d1=2.0E20
+d2=124.0
+b1=1
+b2=2
+b3=-127
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+TestConvert2.java:28: 错误: 需要')'
+		System.out.println("i="i);
+		                       ^
+TestConvert2.java:28: 错误: 需要';'
+		System.out.println("i="i);
+		                        ^
+2 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=8888888888
+d1=2.0E20
+d2=124.0
+b1=1
+b2=2
+b3=-127
+i=0
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+TestConvert2.java:28: 错误: 不兼容的类型: 从double转换到int可能会有损失
+		i = i * 0.1;
+		      ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+TestConvert2.java:28: 错误: 不兼容的类型: 从double转换到int可能会有损失
+		i = (int)i * 0.1;
+		           ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=8888888888
+d1=2.0E20
+d2=124.0
+b1=1
+b2=2
+b3=-127
+i=0
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=8888888888
+d1=2.0E20
+d2=124.0
+b1=1
+b2=2
+b3=-127
+i=0
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=8888888888
+d1=2.0E20
+d2=124.0
+b1=1
+b2=2
+b3=-127
+i=0
+c1=a
+c2=}
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+TestConvert2.java:36: 错误: 不兼容的类型: 从int转换到byte可能会有损失
+		byte b = b1 - b2;
+		            ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=8888888888
+d1=2.0E20
+d2=124.0
+b1=1
+b2=2
+b3=-127
+i=0
+c1=a
+c2=}
+b=-1
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+TestConvert2.java:39: 错误: 不兼容的类型: 从int转换到char可能会有损失
+		char c = c1 + c2;
+		            ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+^[[AjasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=8888888888
+d1=2.0E20
+d2=124.0
+b1=1
+b2=2
+b3=-127
+i=0
+c1=a
+c2=}
+b=-1
+c=Þ
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=8888888888
+d1=2.0E20
+d2=124.0
+b1=1
+b2=2
+b3=-127
+i=0
+c1=a
+c2=}
+b=-1
+c=Þ
+f3=123.1
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+TestConvert2.java:45: 错误: 不兼容的类型: 从double转换到float可能会有损失
+		float f4 = f1 +f2 * 0.1;
+		              ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+TestConvert2.java:45: 错误: 不兼容的类型: 从double转换到float可能会有损失
+		float f4 = (float)f1 +f2 * 0.1;
+		                     ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=8888888888
+d1=2.0E20
+d2=124.0
+b1=1
+b2=2
+b3=-127
+i=0
+c1=a
+c2=}
+b=-1
+c=Þ
+f3=123.1
+f4=12.4
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=8888888888
+d1=2.0E20
+d2=124.0
+b1=1
+b2=2
+b3=-127
+i=0
+c1=a
+c2=}
+b=-1
+c=Þ
+f3=123.1
+f4=12.4
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=8888888888
+d1=2.0E20
+d2=124.0
+b1=1
+b2=2
+b3=-127
+i=0
+c1=a
+c2=}
+b=-1
+c=Þ
+f3=123.1
+f4=12.4
+22.0
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=8888888888
+d1=2.0E20
+d2=124.0
+b1=1
+b2=2
+b3=-127
+i=0
+c1=a
+c2=}
+b=-1
+c=Þ
+f3=123.1
+f4=12.4
+22.0
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=8888888888
+d1=2.0E20
+d2=124.0
+b1=1
+b2=2
+b3=-127
+i=0
+c1=a
+c2=}
+b=-1
+c=Þ
+f3=123.1
+f4=12.4
+22.0
+f=1.0E21
+jasondeMacBook-Pro:2020-0302 jason$ javac TestConvert2.java
+jasondeMacBook-Pro:2020-0302 jason$ java TestConvert2
+f1=0.1
+f2=123.0
+l1=12345678
+l2=8888888888
+d1=2.0E200
+d2=124.0
+b1=1
+b2=2
+b3=-127
+i=0
+c1=a
+c2=}
+b=-1
+c=Þ
+f3=123.1
+f4=12.4
+22.0
+f=Infinity
+jasondeMacBook-Pro:2020-0302 jason$ java OperationTest.java
+OperationTest.java:5: 错误: 找不到符号
+		i = (i2++);
+		^
+  符号:   变量 i
+  位置: 类 OperationTest
+OperationTest.java:6: 错误: 意外的类型
+		System.out.println("i+"=i);
+		                   ^
+  需要: 变量
+  找到:    值
+OperationTest.java:6: 错误: 找不到符号
+		System.out.println("i+"=i);
+		                        ^
+  符号:   变量 i
+  位置: 类 OperationTest
+OperationTest.java:7: 错误: 意外的类型
+		System.out.println("i2+"=i2);
+		                   ^
+  需要: 变量
+  找到:    值
+4 个错误
+错误: 编译失败
+jasondeMacBook-Pro:2020-0302 jason$ java OperationTest.java
+OperationTest.java:5: 错误: 找不到符号
+		i = (i2++);
+		^
+  符号:   变量 i
+  位置: 类 OperationTest
+OperationTest.java:6: 错误: 找不到符号
+		System.out.println("i="+i);
+		                        ^
+  符号:   变量 i
+  位置: 类 OperationTest
+2 个错误
+错误: 编译失败
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+jasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+OperationTest.java:10: 错误: 已在方法 main(String[])中定义了变量 i
+		int i = (i1++);
+		    ^
+OperationTest.java:11: 错误: 意外的类型
+		System.out.println("i+"=i);
+		                   ^
+  需要: 变量
+  找到:    值
+OperationTest.java:12: 错误: 意外的类型
+		System.out.println("i2+"=i2);
+		                   ^
+  需要: 变量
+  找到:    值
+3 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+OperationTest.java:10: 错误: 已在方法 main(String[])中定义了变量 i
+		int i = (i2++);
+		    ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+OperationTest.java:10: 错误: 已在方法 main(String[])中定义了变量 i
+		int i = (i2++);
+		    ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+jasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=21
+i2=22
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+jasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=22
+i2=22
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+jasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=22
+i2=22
+i=10
+i1=9
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+jasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=22
+i2=22
+i=10
+i1=9
+i=8
+i1=8
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+jasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=22
+i2=22
+i=10
+i1=9
+i=8
+i1=8
+false
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+jasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=22
+i2=22
+i=10
+i1=9
+i=8
+i1=8
+false
+true
+true
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+^[[AjasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=22
+i2=22
+i=10
+i1=9
+i=8
+i1=8
+false
+true
+true
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+OperationTest.java:36: 错误: 非法字符: '\uff01'
+		c = ！a；
+		    ^
+OperationTest.java:36: 错误: 非法字符: '\uff1b'
+		c = ！a；
+		      ^
+OperationTest.java:36: 错误: 不是语句
+		c = ！a；
+		     ^
+^[[A3 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+jasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=22
+i2=22
+i=10
+i1=9
+i=8
+i1=8
+false
+true
+true
+false
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+^[[AjasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=22
+i2=22
+i=10
+i1=9
+i=8
+i1=8
+false
+true
+true
+false
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+^[[AjasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=22
+i2=22
+i=10
+i1=9
+i=8
+i1=8
+false
+true
+true
+false
+false
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+^[[AjasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=22
+i2=22
+i=10
+i1=9
+i=8
+i1=8
+false
+true
+true
+false
+false
+true
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+jasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=22
+i2=22
+i=10
+i1=9
+i=8
+i1=8
+false
+true
+true
+false
+false
+true
+100
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+OperationTest.java:51: 错误: 需要';'
+		String type = score < 60 : "及格" : "不及格"
+		                        ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+OperationTest.java:51: 错误: 需要';'
+		String type = score < 60 ? "及格" : "不及格"
+		                                       ^
+1 个错误
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+^[[AjasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=22
+i2=22
+i=10
+i1=9
+i=8
+i1=8
+false
+true
+true
+false
+false
+true
+100
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+jasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=22
+i2=22
+i=10
+i1=9
+i=8
+i1=8
+false
+true
+true
+false
+false
+true
+100
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+^[[A^[[AjasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=22
+i2=22
+i=10
+i1=9
+i=8
+i1=8
+false
+true
+true
+false
+false
+true
+100
+不及格
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+jasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=22
+i2=22
+i=10
+i1=9
+i=8
+i1=8
+false
+true
+true
+false
+false
+true
+100
+不及格
+-100
+jasondeMacBook-Pro:2020-0302 jason$ javac OperationTest.java
+jasondeMacBook-Pro:2020-0302 jason$ java OperationTest
+i=20
+i2=21
+i=22
+i2=22
+i=10
+i1=9
+i=8
+i1=8
+false
+true
+true
+false
+false
+true
+100
+不及格
+-1
+jasondeMacBook-Pro:2020-0302 jason$ javac TestIf.java
+错误: 找不到文件: TestIf.java
+用法: javac <选项> <源文件>
+使用 --help 可列出可能的选项
+jasondeMacBook-Pro:2020-0302 jason$ javac TestIf.java
+错误: 找不到文件: TestIf.java
+用法: javac <选项> <源文件>
+使用 --help 可列出可能的选项
+jasondeMacBook-Pro:2020-0302 jason$ cd ..
+jasondeMacBook-Pro:MSB01 jason$ cd 2020-0304
+jasondeMacBook-Pro:2020-0304 jason$ javac TestIf.java
+jasondeMacBook-Pro:2020-0304 jason$ java TestIf
+20<40
+jasondeMacBook-Pro:2020-0304 jason$ javac TestIf.java
+^[[AjasondeMacBook-Pro:2020-0304 jason$ java TestIf
+30<40
+jasondeMacBook-Pro:2020-0304 jason$ javac TestIf.java
+^[[AjasondeMacBook-Pro:2020-0304 jason$ java TestIf
+50<60
+jasondeMacBook-Pro:2020-0304 jason$ javac TestIf.java
+jasondeMacBook-Pro:2020-0304 jason$ java TestIf
+70>=60
+jasondeMacBook-Pro:2020-0304 jason$ java TestIf
+70>=60
+jasondeMacBook-Pro:2020-0304 jason$ java TestIf
+70>=60
+jasondeMacBook-Pro:2020-0304 jason$ javac TestIf.java
+^[[A^[[AjasondeMacBook-Pro:2020-0304 jason$ java TestIf
+70>=60
+jasondeMacBook-Pro:2020-0304 jason$ javac TestIf.java
+jasondeMacBook-Pro:2020-0304 jason$ java TestIf
+70>=60
+70>=60
+jasondeMacBook-Pro:2020-0304 jason$ javac TestIf.java
+^[[A^[[AjasondeMacBook-Pro:2020-0304 jason$ java TestIf
+70>=60
+70<=60
+jasondeMacBook-Pro:2020-0304 jason$ javac TestFor.java
+TestFor.java:8: 错误: 找不到符号
+			resut += f;
+			^
+  符号:   变量 resut
+  位置: 类 TestFor
+1 个错误
+jasondeMacBook-Pro:2020-0304 jason$ javac TestFor.java
+jasondeMacBook-Pro:2020-0304 jason$ java TestIf
+70>=60
+70<=60
+jasondeMacBook-Pro:2020-0304 jason$ java TestFor
